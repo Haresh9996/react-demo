@@ -2,10 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import navlogo from '/assets/icon (2).png'
 import { TiShoppingCart } from "react-icons/ti";
-import { useAuth0 } from "@auth0/auth0-react";
 
-const Navbar = () => {
-    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+
+const Navbar = ({ isLogedin, setIsLogedin, userName }) => {
+    console.log('----',userName)
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -35,28 +36,20 @@ const Navbar = () => {
                                 <NavLink className="nav-NavLink" to='/cart'><TiShoppingCart /></NavLink>
                             </li>
 
-                            {isAuthenticated ? <li className="nav-item">{user.name}</li>
-                                : null
-                            }
-                            {
-                                isAuthenticated ? (
-                                    <li className="nav-item">
-                                        <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}> Log Out </button>
-                                    </li>
-                                )
-                                    :
-                                    (
-                                        <li className="nav-item">
-                                            <button onClick={() => loginWithRedirect()}>Log In</button>
-                                        </li>
-                                    )
-
-                            }
-
-                        </ul>
-                    </div>
+                            <li className="nav-item">
+                                {isLogedin ? ( 
+                                    <>
+                                    <span>{userName}</span> 
+                                    < NavLink className="nav-link" to='/' onClick={() => setIsLogedin(false)}>Logout</NavLink>
+                                    </>
+                            ) : (
+                            <NavLink className="nav-link" to='/login'>Login</NavLink>
+                                )}
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav >
         </>
     )
 }
