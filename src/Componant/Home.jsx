@@ -68,8 +68,8 @@ const Home = () => {
                     {
                         loading ? <>
                             <div className="container d-flex align-items-center justify-content-center my-5">
-                                <div class="spinner-border" style={{ width: '6rem', height: '6rem' }} role="status">
-                                    <span class="visually-hidden">Loading...</span>
+                                <div className="spinner-border" style={{ width: '6rem', height: '6rem' }} role="status">
+                                    <span className="visually-hidden">Loading...</span>
                                 </div>
                             </div>
                         </>

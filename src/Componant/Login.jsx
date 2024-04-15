@@ -30,7 +30,6 @@ const Login = ({ checkData, setUserName }) => {
     } else {
       alert('Invalid User Data')
     }
-
   }
 
 

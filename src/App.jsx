@@ -41,7 +41,7 @@ function App() {
 
 
           <Route path='/login' element={<Login checkData={setIsLogedin} setUserName={setUserName} />} />
-          <Route path='/signup' element={<Signup />} checkData={setIsLogedin} />
+          <Route path='/signup' element={<Signup checkData={setIsLogedin} />} />
 
 
           <Route path='/*' element={<ErrorPage />} />

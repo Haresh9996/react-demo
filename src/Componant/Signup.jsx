@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Signup = ({checkData}) => {
+const Signup = ({ checkData }) => {
 
   let [data, setData] = useState({ name: '', email: '', password: '' })
   let [finalData, setFinalData] = useState([])
@@ -11,6 +11,12 @@ const Signup = ({checkData}) => {
     let { name, value } = e.target
     setData({ ...data, [name]: value })
   }
+
+  // useEffect(()=>{
+
+  //   let localData = JSON.parse(localStorage.getItem('userData'))
+  //   setFinalData(localData)
+  // },[])
 
   let handleShubmit = (e) => {
     e.preventDefault()
@@ -25,7 +31,7 @@ const Signup = ({checkData}) => {
       navigate('/')
     }
   }
-  
+
   return (
     <>
       <div className="container min-vh-100 d-flex align-items-center justify-content-center flex-column gap-4">
