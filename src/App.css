@@ -16,7 +16,7 @@
 }
 
 header {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.677), rgba(0, 0, 0, 0.479), transparent), url(../public/assets/watch\ background_2.jpg);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.677), rgba(0, 0, 0, 0.479), transparent), url(../public/assets/watch_background_2.jpg);
     height: 80dvh;
     width: 100%;
     background-size: cover;
