@@ -48,7 +48,7 @@ const Home = () => {
         <>
             <header>
                 <div className="header-info">
-                    <h2 className='header-heading'>STYLISH WATCHES</h2>
+                    <h2 className='header-heading text-red-500'>STYLISH WATCHES</h2>
                     <p className='header-data'>A watch is a small clock carried or worn by a person. It is also a fashion accessory for men and women. A watch may be one of the few accessories worn by a person.</p>
                     <div className="d-flex gap-3">
                         <Link to='/contact' >

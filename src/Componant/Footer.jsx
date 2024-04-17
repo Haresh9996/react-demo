@@ -12,7 +12,7 @@ const Footer = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id quam et urna fermentum dignissim.</p>
             </div>
             <div className="col-12 col-md-4">
-              <h4>Quick Links</h4>
+              <h4 className='text-red-800'>Quick Links</h4>
               <ul className='ps-0'>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Shop">Shop</Link></li>

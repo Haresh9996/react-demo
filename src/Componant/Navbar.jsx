@@ -5,11 +5,11 @@ import { TiShoppingCart } from "react-icons/ti";
 
 
 const Navbar = ({ isLogedin, setIsLogedin, userName }) => {
-    console.log('----',userName)
+    console.log('----', userName)
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="bg-gray-800">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" href="#"><img src={navlogo} width="100em" alt="icon"
                         className="img-fluid rounded-pill shadow-lg" /></NavLink>
@@ -27,7 +27,7 @@ const Navbar = ({ isLogedin, setIsLogedin, userName }) => {
                                 <NavLink className="nav-NavLink" to='/shop' >Shop</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-NavLink" to='/about'>About</NavLink>
+                                <NavLink className="nav-NavLink text-red-600" to='/about'>About</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-NavLink" to='/contact'>Contact us</NavLink>
@@ -37,19 +37,19 @@ const Navbar = ({ isLogedin, setIsLogedin, userName }) => {
                             </li>
 
                             <li className="nav-item">
-                                {isLogedin ? ( 
+                                {isLogedin ? (
                                     <>
-                                    <span>{userName}</span> 
-                                    < NavLink className="nav-link" to='/' onClick={() => setIsLogedin(false)}>Logout</NavLink>
+                                        <span>{userName}</span>
+                                        < NavLink className="nav-link" to='/' onClick={() => setIsLogedin(false)}>Logout</NavLink>
                                     </>
-                            ) : (
-                            <NavLink className="nav-link" to='/login'>Login</NavLink>
+                                ) : (
+                                    <NavLink className="nav-link" to='/login'>Login</NavLink>
                                 )}
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav >
+            </nav >
         </>
     )
 }
